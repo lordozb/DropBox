@@ -11,29 +11,19 @@ else
     echo "<script> window.location = 'index.php';</script>";
 }
 
-//echo $name . " ".$pass;
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "DropBox";
-
-//Create the connection
-
-$conn = mysqli_connect($servername,$username,$password,$dbname) or die("Some error occurred during connection " . mysqli_error($conn));
-
-// Write query
-
+include 'connection.php';
 $query = "SELECT name,password FROM Login";
-
-// Execute the query.
-$flag=0;
 $result = mysqli_query($conn, $query);
+$flag=0;
+
 while($row = mysqli_fetch_array($result))
 {   if($row[0]==$name and $row[1]==$pass){
    // location.href(Dropbox.html);
 //    echo "correct";
     $flag=1;
-    echo "<script> window.location = 'Dropbox.html';</script>";
+    echo "<script> window.location = 'DropBox.php';</script>";
+    session_start();
+    $_SESSION["name"]=$name;
     break;
 }
 }
@@ -43,5 +33,6 @@ mysqli_close($conn);
 if($flag==0) {
     echo "<script> window.location = 'index.php';</script>";
 }
+include 'session.php';
 ?>
 
