@@ -1,8 +1,8 @@
 <?php
-if (isset($_POST['user']) and isset($_POST['pass']) )
+if (isset($_POST['username']) and isset($_POST['password']) )
 {
-    $name=$_POST['user'];
-    $pass=$_POST['pass'];
+    $name=$_POST['username'];
+    $pass=$_POST['password'];
     //echo "name and pass set".$name.$pass;
 }
 else
@@ -21,10 +21,11 @@ while($row = mysqli_fetch_array($result))
    // location.href(Dropbox.html);
 //    echo "correct";
     $flag=1;
-    echo "<script> window.location = 'DropBox.php';</script>";
     session_start();
     $_SESSION["name"]=$name;
-    break;
+    echo "<script> window.location = 'DropBox.php';</script>";
+
+
 }
 }
 
@@ -33,6 +34,6 @@ mysqli_close($conn);
 if($flag==0) {
     echo "<script> window.location = 'index.php';</script>";
 }
-include 'session.php';
+
 ?>
 

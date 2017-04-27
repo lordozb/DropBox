@@ -7,6 +7,7 @@
  */
 session_start();
 if(array_key_exists('name',$_SESSION) && !empty($_SESSION['name'])) {
-    echo "<script> window.location = 'index.php';</script>";
+}else{
+        echo "<script> window.location = 'index.php';</script>";
 }
 ?>
