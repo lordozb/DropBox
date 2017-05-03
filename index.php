@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+                            <form id="register-form" action="Register.php" method="post" role="form" style="display: none;">
                                 <div class="form-group">
                                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                 </div>
@@ -74,10 +74,10 @@
                                     <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                    <input type="password" name="" id="password" tabindex="2" class="form-control" placeholder="Password">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                                    <input type="password" name="password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
@@ -96,7 +96,6 @@
 </div>
 <!--login text fields ends-->
 <div><br><br><br></div>
-<?php include 'footer.php' ?>
 </body>
 <script src="Javascript/jquery-3.2.1.min.js"></script>
 <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->

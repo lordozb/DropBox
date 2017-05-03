@@ -12,7 +12,7 @@ else
 }
 
 include 'connection.php';
-$query = "SELECT name,password FROM Login";
+$query = "SELECT username,password,email FROM register";
 $result = mysqli_query($conn, $query);
 $flag=0;
 
@@ -23,6 +23,8 @@ while($row = mysqli_fetch_array($result))
     $flag=1;
     session_start();
     $_SESSION["name"]=$name;
+    echo $row[2];
+    $_SESSION["email"]=$row[2];
     echo "<script> window.location = 'DropBox.php';</script>";
 
 
